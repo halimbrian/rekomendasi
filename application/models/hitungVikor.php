@@ -26,7 +26,7 @@ class hitungVikor extends CI_Model {
 
      
 	// return $this->db->query('select id_mobil as id_mobil, harga as harga,  kapasitas_silinder as kapasitas_silinder, kapasitas_penumpang as kapasitas_penumpang from  tb_mobil '. $where1)->result();
-		$hasil = $this->db->query('select tb_alternatif.id_mobil as id_mobil, tb_alternatif.harga as harga,  tb_alternatif.kapasitas_silinder as kapasitas_silinder, tb_alternatif.kapasitas_penumpang as kapasitas_penumpang  from tb_alternatif join tb_mobil on tb_alternatif.id_mobil = tb_mobil.id_mobil'. $where1);
+		$hasil = $this->db->query('select id_mobil as id_mobil, harga as harga,  kapasitas_silinder as kapasitas_silinder, kapasitas_penumpang as kapasitas_penumpang from tb_mobil '. $where1);
 		if($this->db->affected_rows() >0)
 		{
 			return $hasil->result();
